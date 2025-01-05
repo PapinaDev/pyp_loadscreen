@@ -1,0 +1,230 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: center;
+}
+
+.papina {
+	width: 100;
+	height: 100;
+	margin: 0;
+}
+
+.mute {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	margin: 2vh auto;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-family: 'Quicksand';
+	font-weight: 500;
+	text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black;
+}
+
+.mute p {
+	margin: 0 0.5vh;
+	background: white;
+	color: black;
+	padding: 0.2vh 0.5vh;
+	border-radius: 0.3vh;
+	font-weight: 600;
+	text-shadow: none;
+	font-size: 1.3vh;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.bgtrueblack {
+	background-color: rgb(0, 0, 0);
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 99999;
+	transition: 4s ease-in-out all;
+}
+
+.bgtrueblack.show {
+	opacity: 1;
+	transition: 2s ease-in-out all;
+}
+
+.container {
+	width: 475px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 20%;
+	opacity: 0;
+	animation: entrada 1s ease-in-out forwards;
+	text-align: center;
+}
+
+.progress {
+    position: fixed;
+    bottom: -3vh;
+    width: 100%;
+    background-color: rgb(0 0 0 / 31%);
+    height: 2.5vh;
+    border: 0.1vh solid rgba(255, 255, 255, 0.137);
+    border-radius: 5px;
+}
+
+.web {
+	position: absolute;
+	top: 1vh;
+	width: 100%;
+	text-align: center;
+	font-family: cursive;
+	color: rgb(18, 101, 196);
+	font-size: 1.9vh;
+}
+
+.sombra {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/sombra.png');
+	opacity: 0.5;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bottom {
+	left: 7%;
+	width: 86%;
+	position: absolute;
+	bottom: 8.5vh;
+	transform: translateY(10vh);
+	opacity: 0;
+	transition: cubic-bezier(0, 0.605, 0.145, 1.005) 2s all;
+	transition-delay: 0.5s;
+}
+
+.loading.show .bottom {
+	transform: translateY(0vh);
+	opacity: 1;
+}
+
+.flex-bottom {
+	display: flex;
+	color: white;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bienvenido {
+	font-family: 'Bebas Neue';
+	font-size: 4.5vh;
+	text-shadow: 0 0 20px rgba(255, 255, 255, 0.342);
+	z-index: 9999;
+}
+
+.accediendo {
+	font-family: Quicksand;
+	font-size: 2.5vh;
+	text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black;
+	font-weight: 500;
+}
+
+.barra {
+    width: 50%;
+    height: 100%;
+	background-color: rgba(0, 229, 255, 0.61);
+	background: linear-gradient(33deg, rgba(56, 64, 120, 0.8), rgb(8, 198, 255, 0.8));
+    background-size: 400% 400%;
+    box-shadow: 0 0 20px #0f0f0f9a;
+    border-radius: 5px 0 0 5px;
+    transition: 0.25s linear all;
+}
+
+.papinaservice {
+	position: fixed;
+	top: 30vh;
+	right: 100vh;
+	width: 15vh;
+	display: none; 
+}
+
+.loading.show .papinaservice {
+	display: block;
+}
+
+.papinaservice img {
+	width: 200%;
+}
+
+@media (width: 2560px) and (height: 1080px) {
+	.container {
+		margin-top: 11% !important;
+	}
+}
+
+@keyframes entrada {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 32%;
+	}
+}
+
+.dot-1 {
+	animation: fadeInDot 2s ease-in-out infinite;
+	animation-delay: 0.2s !important;
+	display: inline-block;
+}
+
+.dot-2 {
+	animation-delay: 0.4s !important;
+	animation: fadeInDot 2s ease-in-out infinite;
+	display: inline-block;
+	margin-left: -0.1vh;
+}
+
+.dot-3 {
+	animation-delay: 0.6s !important;
+	animation: fadeInDot 2s ease-in-out infinite;
+	display: inline-block;
+	margin-left: -0.1vh;
+}
+
+@keyframes fadeInDot {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+}

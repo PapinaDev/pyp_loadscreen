@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Loading By Papina Service</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+	</head>
+	<body style="overflow: hidden">
+		<video autoplay loop id="myVideo" width="1920" height="1080" style="display: none;">
+			<source id="video" type="video/mp4">
+		</video>
+		
+		<div class="loading">
+			<span class="web">Papina loading</span> <!-- remove this if remove this loading in your server -->
+			<div class="papinaservice">
+				<img src="" alt=""/>
+			</div>
+			<div class="bottom">
+				<div class="flex-bottom">
+					<div class="bienvenido">Welcome to Papina Devlopment</div>
+					<div class="accediendo">
+						<span class="loading_text">Accessing the server</span>
+						<span class="dot-animation">
+							<span class="dot-1">.</span>
+							<span class="dot-2">.</span>
+							<span class="dot-3">.</span>
+						</span>
+					</div>
+				</div>
+				<div class="progress">
+					<div class="barra"></div>
+
+					<span class="mute">Press <p>SPACE</p> to mute</span>
+				</div>
+			</div>
+			<div class="sombra"></div>
+		</div>
+
+		<div class="bgtrueblack show"></div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../config.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
